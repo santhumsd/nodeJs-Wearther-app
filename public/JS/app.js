@@ -18,15 +18,15 @@ fetch("http://localhost:4000/weather?address="+search.value)
             console.log(data)
              if(data.error){
                 message1.textContent=data.error
-                console.log(data.error)
+                
              }
               else
               {
                 message1.textContent=data.forecast
                 message2.textContent=data.address
-                console.log(data.forecast)
-                console.log(data.address)
-                console.log(data.location)
+               //  console.log(data.forecast)
+               //  console.log(data.address)
+               //  console.log(data.location)
               }
          
              
