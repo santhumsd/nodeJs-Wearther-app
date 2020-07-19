@@ -12,7 +12,7 @@ e.preventDefault();
 message1.textContent="Loding....."
 message2.textContent=""
 console.log(search.value)
-fetch("http://localhost:4000/weather?address="+search.value)
+fetch("/weather?address="+search.value)
    .then(function(res){res.json()
          .then(function(data){
             console.log(data)

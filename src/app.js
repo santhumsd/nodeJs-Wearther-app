@@ -3,13 +3,14 @@ const app=express();
 const path=require('path');
 const hbs=require('hbs');
 const gioCode=require('../src/Utils/gioCode');
-const foreCast=require('../src/Utils/foreCast');
+const foreCast=require('../src/Utils/forecast');
 console.log(__dirname);
 console.log(__filename);
 //define paths for express config
 const publicDirectoryPath=path.join(__dirname,'../public');
 const viewPath=path.join(__dirname,'../templates/views')
 const partialsPath=path.join(__dirname,'../templates/partials')
+const port=process.env.PORT || 4000;
 //console.log(express.static(publicDirectoryPath))
 //set up handle bars engine and views location
 app.set('view engine','hbs');
@@ -109,8 +110,8 @@ app.get('*',(req,res)=>{
         href:"/CSSFolder/style.css"
     })
 })
-app.listen(4000,()=>{
-    console.log('listening at port 3000')
+app.listen(port,()=>{
+    console.log(`listening at port ${port}`)
 })
 // const http = require('http')
 // const url = 'http://api.weatherstack.com/current?access_key=66e140485e333d4c34d24aa1a62af642&query=40,-75&units=m'
