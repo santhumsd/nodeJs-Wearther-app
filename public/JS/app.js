@@ -1,4 +1,4 @@
-'use strict'
+
 console.log("hey its executing in browser wow amazing!!!!")
 
 
@@ -10,14 +10,15 @@ const message2=document.querySelector('#message-2');
 weatherForm.addEventListener('submit',(e)=>{
 
 e.preventDefault();
+e.stopPropagation();
 message1.textContent="Loding....."
 message2.textContent=""
 console.log(search.value)
-fetch("/weather?address="+search.value)
+fetch(`/weather?address=${search.value}`)
    .then(function(res){res.json()
          .then(function(data){
          
-            console.log(data)
+            // console.log(data)
              if(data.error){
                 message1.textContent=data.error
                 
