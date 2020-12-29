@@ -1,3 +1,4 @@
+'use strict'
 console.log("hey its executing in browser wow amazing!!!!")
 
 
