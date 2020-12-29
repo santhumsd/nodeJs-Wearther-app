@@ -1,16 +1,18 @@
 
-console.log("hey its executing in browser wow amazing!!!!")
 
 
-const weatherForm=document.querySelector('form')
-const search=document.querySelector('input')
-const message1=document.querySelector('#message-1');
-const message2=document.querySelector('#message-2');
+
 
 // weatherForm.addEventListener('submit',(e)=>{
 
 // e.preventDefault();
 const getData=()=>{
+   
+console.log("hey its executing in browser wow amazing!!!!")
+const weatherForm=document.querySelector('form')
+const search=document.querySelector('input')
+const message1=document.querySelector('#message-1');
+const message2=document.querySelector('#message-2');
    message1.textContent="Loading....."
    message2.textContent=""
    console.log(search.value)
