@@ -6,7 +6,7 @@
 // weatherForm.addEventListener('submit',(e)=>{
 
 // e.preventDefault();
-const getData=()=>{
+function getData(){
    
 console.log("hey its executing in browser wow amazing!!!!")
 const weatherForm=document.querySelector('form')

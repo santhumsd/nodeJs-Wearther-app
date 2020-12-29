@@ -6,7 +6,7 @@ const url=`http://api.weatherstack.com/current?access_key=66e140485e333d4c34d24a
             callback("re-establish your connection",undefined)
         }
         else if(!response.body.current.temperature){
-            calback("the coardinates are wrong",undefined)
+            callback("the coardinates are wrong",undefined)
         }
         else{
             

@@ -4,7 +4,7 @@
         <title>main objective</title>
         <link rel="icon" href="/Images/weather.png">
         <link rel="stylesheet" href={{href}} >
-        <script src="/js/app.js"></script>
+        
     </head>
     <body>
        <div class="main-content">
@@ -15,7 +15,43 @@
             <button onclick="getData()">submit</button>
             <p id="message-1"></p>
             <p id="message-2"></p>
-        
+        <script> 
+            function getData(){
+   
+console.log("hey its executing in browser wow amazing!!!!")
+const weatherForm=document.querySelector('form')
+const search=document.querySelector('input')
+const message1=document.querySelector('#message-1');
+const message2=document.querySelector('#message-2');
+   message1.textContent="Loading....."
+   message2.textContent=""
+   console.log(search.value)
+   fetch(`/weather?address=${search.value}`)
+      .then(function(res){res.json()
+            .then(function(data){
+            
+              console.log(data)
+                if(data.error){
+                   message1.textContent=data.error
+                   
+                }
+                 else
+                 {
+                   message1.textContent=data.forecast
+                   message2.textContent=data.address
+                  //  console.log(data.forecast)
+                  //  console.log(data.address)
+                  //  console.log(data.location)
+                 }
+            
+                
+              })
+           
+       })
+       return false
+}
+
+        </script>
        
        </div>
     {{>footer}}
