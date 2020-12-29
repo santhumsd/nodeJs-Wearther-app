@@ -15,6 +15,7 @@ console.log(search.value)
 fetch("/weather?address="+search.value)
    .then(function(res){res.json()
          .then(function(data){
+         
             console.log(data)
              if(data.error){
                 message1.textContent=data.error
